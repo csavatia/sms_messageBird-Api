@@ -4,11 +4,11 @@ if(isset($_POST['submit'])){
     $recipient = $_POST['recipient'];
     $sms = $_POST['sms'];
 
-    $messageBird = new \MessageBird\Client('WCJWtOIVR9XL70GCurYSr5kgB');
+    $messageBird = new \MessageBird\Client('aV3oPUY2bj2TqHoSeaUgJpM9k');
     $message =  new \MessageBird\Objects\Message();
     try{
 
-        $message->originator = '+254112315868';
+        $message->originator = '+254729664948';
         $message->recipients = [$recipient];
         $message->body = $sms;
         $response = $messageBird->messages->create($message);
