@@ -4,11 +4,11 @@ if(isset($_POST['submit'])){
     $recipient = $_POST['recipient'];
     $sms = $_POST['sms'];
 
-    $messageBird = new \MessageBird\Client('aV3oPUY2bj2TqHoSeaUgJpM9k');
+    $messageBird = new \MessageBird\Client('Live_API_Key');
     $message =  new \MessageBird\Objects\Message();
     try{
 
-        $message->originator = '+254729664948';
+        $message->originator = 'Your_Phone_Number';
         $message->recipients = [$recipient];
         $message->body = $sms;
         $response = $messageBird->messages->create($message);
